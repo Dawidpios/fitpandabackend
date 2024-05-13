@@ -1,21 +1,16 @@
 import express from 'express'
-import { PrismaClient } from "@prisma/client";
+import user from './routes/user.js'
+
 const app = express();
 app.use(express.json());
-
-const prisma = new PrismaClient()
 
 app.get("/", (req, res) => {
   res.json({message: "Udało się HEHEHEH m"});
 });
 
-app.post('/add', async (req, res) => {
+app.use(user)
 
-  const user = await prisma.user.create({data: req.body})
-
-  res.json(user)
-})
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT! || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

@@ -2,22 +2,25 @@
   "name": "fitpandabackend",
   "version": "1.0.0",
   "description": "",
-  "type":"module",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "build": "node server.js"
+    "dev": "nodemon ./dist/server.js",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.12.1",
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@types/node": "^20.12.11",
     "prisma": "^5.12.1"
   }
 }
