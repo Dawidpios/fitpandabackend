@@ -2,14 +2,20 @@
   "name": "fitpandabackend",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
-  "main": "./dist/server.js",
+  "type":"module",
+  "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon src/index.ts",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "build": "node server.js"
+>>>>>>> parent of c1db6e4 (Prisma, user controllers, routes, ts configs)
   },
   "pre-commit": [
     "ts.check",
@@ -20,16 +26,18 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.12.1",
-    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+<<<<<<< HEAD
     "nodemon": "^3.1.0",
     "pre-commit": "^1.2.2",
     "rimraf": "^5.0.7",
     "typescript": "^5.4.5"
+=======
+    "nodemon": "^3.1.0"
+>>>>>>> parent of c1db6e4 (Prisma, user controllers, routes, ts configs)
   },
   "devDependencies": {
-    "@types/node": "^20.12.11",
     "prisma": "^5.12.1"
   }
 }
