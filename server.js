@@ -11,7 +11,7 @@ app.use(express.json());
 const prisma = new PrismaClient()
 
 app.get("/", (req, res) => {
-  res.json({message: "Udało się HEHEHEH m"});
+  res.json({message: "Udało się m"});
 });
 
 app.post('/add', async (req, res) => {
